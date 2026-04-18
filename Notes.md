@@ -44,4 +44,5 @@ Creamos funcion para validar datos:
 Este archivo contendra todas las alertas para los formularios.
 
 Crearemos una funcion en la que nos muestre las alertas con sweet alert
+hasta aqui me quede
 
