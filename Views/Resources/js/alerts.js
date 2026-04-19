@@ -32,7 +32,6 @@ function submitForm(even){
         case "update":
             alertText = "Los datos se guardaran en el sistema";
             break;
-
     }
 
     Swal.fire({

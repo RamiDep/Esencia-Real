@@ -44,5 +44,33 @@ Creamos funcion para validar datos:
 Este archivo contendra todas las alertas para los formularios.
 
 Crearemos una funcion en la que nos muestre las alertas con sweet alert
-hasta aqui me quede
+
+
+# === Creando modelo y Controlador de usuario: === # *¡Importante!*
+
+Que va contener
+    existe una variable llamada $action que se encuentra en plantilla
+
+  *modelo: los modelos solo se ejecutan en un lugar, el controlador se puede ejecutar en varias rutas, sea en actions o en el index*
+    Creamos la clase y la extendemos de MainModel e incluimos Mainmodel
+  - Modelo para insertar datos
+  - Modelo para editar datos 
+
+  *Controlador: cuando estemos haciendo una peticion ajax el controlador se va ejecutar en actions. Cuand no sea una peticion se va ejecutar en el index*
+  - Controlador para insertar datos
+  - Controlador para editar datos 
+
+  *Actions: debe incluir App. por que esta la ruta del servidor y habra una validacion en la que si no existe una peticion valida lo redirija al index*
+  if:
+    - instancia al controlador
+  else:
+    - inicializamos action en true
+    - session_unset
+    - session_destroy
+    - heafer
+    -exit
+
+# === SIGUE CREAR CONTROLADOR PARA REGISTRAR USUARIOS === #
+
+
 

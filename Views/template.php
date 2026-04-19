@@ -17,7 +17,7 @@
 
 <body id="page-top" class="sidebar-toggled">
     <?php 
-        $request_ajax = false;
+        $action = false;
         require_once("./Controllers/ViewController.php");
 
         $object_view = new ViewController();

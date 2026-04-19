@@ -1,5 +1,5 @@
  <!-- Topbar -->
-    <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+    <nav class="navbar navbar-expand navbar-light bg-secondary topbar mb-4 static-top shadow">
 
         <!-- Sidebar Toggle (Topbar) -->
         <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -13,7 +13,7 @@
                 <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
                     aria-label="Search" aria-describedby="basic-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
+                    <button class="btn btn-dark" type="button">
                         <i class="fas fa-search fa-sm"></i>
                     </button>
                 </div>
@@ -38,7 +38,7 @@
                                 placeholder="Search for..." aria-label="Search"
                                 aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
+                                <button class="btn btn-dark" type="button">
                                     <i class="fas fa-search fa-sm"></i>
                                 </button>
                             </div>
@@ -63,7 +63,7 @@
                     </h6>
                     <a class="dropdown-item d-flex align-items-center" href="#">
                         <div class="mr-3">
-                            <div class="icon-circle bg-primary">
+                            <div class="icon-circle bg-dark">
                                 <i class="fas fa-file-alt text-white"></i>
                             </div>
                         </div>
