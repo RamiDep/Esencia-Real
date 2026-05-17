@@ -23,6 +23,7 @@
         $object_view = new ViewController();
         $view = $object_view -> get_view_controller();
         
+        
         if ($view == "login" || $view == "404"){
             require_once("./Views/templates/".$view."-view.php");
     ?>
@@ -33,12 +34,14 @@
         
             <div id="content-wrapper" class="d-flex flex-column"> <!-- Content Wrapper -->
                 
-                <div id="content"><!-- Main Content -->
+                <div id="content" ><!-- Main Content -->
                     <?php include("partials/Header.php") ?>
                 
-                    <div class="container-fluid"> <!-- Begin Page Content -->
+                    <!-- Begin Page Content ESTA PARTE ES EL CONTENIDO COMPLETO DE LA VISTA -->
                     
-                    </div> <!--container-fluid -->
+                        <?php include $view; ?>
+                   
+                     <!--container-fluid -->
                 
                 </div><!-- End of Main Content -->
                 <?php include("partials/Footer.php") ?>

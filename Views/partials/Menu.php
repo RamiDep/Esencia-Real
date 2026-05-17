@@ -29,15 +29,29 @@
 
         <!-- Nav Item - Pages Collapse Menu -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse_perfumes"
+                aria-expanded="true" aria-controls="collapse_perfumes">
                 <i class="fas fa-spray-can"></i>
                 <span>Perfumes</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div id="collapse_perfumes" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones:</h6>
                     <a class="collapse-item" href="buttons.html">Catalogo de perfumes</a>
+                </div>
+            </div>
+        </li>
+         <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse_users"
+                aria-expanded="true" aria-controls="collapse_users">
+                <i class="fas fa-users"></i>
+                <span>Usuarios</span>
+            </a>
+            <div id="collapse_users" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Opciones:</h6>
+                    <a class="collapse-item" href="buttons.html">Catalogo de usuarios</a>
                 </div>
             </div>
         </li>

@@ -5,8 +5,9 @@ class ViewModel
     protected static function get_view_model($view){
         $listWithe = 
         [
-            "home"
+            "home", "create-new-user"
         ];
+        
         if (in_array($view, $listWithe))
         {
             if (is_file ("./Views/templates/".$view."-view.php")){
@@ -19,7 +20,7 @@ class ViewModel
         }else{
                 $contend = "404";
         }
-            
+           
         return $contend;    
     }
 } 
