@@ -23,15 +23,9 @@ function submitForm(even){
 
     switch(typeForm)
     {
-        case "save":
-            alertText = "Los datos se guardaran en el sistema";
-            break;
-        case "delete":
-            alertText = "Los datos se guardaran en el sistema";
-            break;
-        case "update":
-            alertText = "Los datos se guardaran en el sistema";
-            break;
+        case "save": alertText = "Los datos se guardaran en el sistema"; break;
+        case "delete": alertText = "Los datos se guardaran en el sistema"; break;
+        case "update": alertText = "Los datos se guardaran en el sistema"; break;
     }
 
     Swal.fire({
@@ -48,7 +42,7 @@ function submitForm(even){
             fetch(action, config)
             .then(response => response.json())
             .then(response => {
-            return ajaxAlert(response);
+            return alertBySweetAlert(response);
             });
         }
     });

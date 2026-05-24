@@ -28,12 +28,12 @@
 
                 <div class="container-input">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="text" placeholder="email">
+                    <input type="email" placeholder="email" name="user_email" >
                 </div>
 
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="password">
+                    <input type="password" placeholder="password" name="user_password">
                 </div>
                 <a href="">¿Olvidaste tu contraseña?</a>
                 <button class="button">Iniciar sessión</button>

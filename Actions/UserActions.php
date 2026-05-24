@@ -5,6 +5,7 @@
     if(isset($_POST['add_user'])){
         require_once("../Controllers/UserController.php");
         $obj_user = new UserController();
+        $obj_user -> add_user_controller();
         
     }else{
         session_start(['name' => 'esencia_real']);

@@ -76,6 +76,7 @@ Que va contener
 - CAMPOS CON NOMBRES PARA VISTA DE USUARIO CORRECTAMENTE
 
 *ACOMODAR EL SELECT PARA QUE SE VEA BOITO*
+*Creando controlador para el Login*
 
 
 
