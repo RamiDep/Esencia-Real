@@ -15,5 +15,7 @@
    <script src="<?php echo SERVER_URL ?>Views/Resources/js/demo/chart-area-demo.js"></script>
    <script src="<?php echo SERVER_URL ?>Views/Resources/js/demo/chart-pie-demo.js"></script>
 
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
    <!-- Alertas con Sweet Alert -->
    <script src="<?php echo SERVER_URL ?>Views/Resources/js/alerts.js"></script>

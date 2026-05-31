@@ -1,6 +1,6 @@
 <?php
     
-    if ($ajax_request){
+    if ($action){
         require_once ("../config/ServerDB.php");
     }else{
         require_once ("./config/ServerDB.php");

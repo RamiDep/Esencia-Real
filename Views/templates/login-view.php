@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <div class="container-form">
-            <form class="sign-in">
+            <form class="sign-in" method="POST">
                 <h2>Iniciar de sessión</h2>
                 <div class="social-networks">
                     <ion-icon name="logo-facebook"></ion-icon>
@@ -27,15 +27,15 @@
                 <span>Use su correo y contraseña</span>
 
                 <div class="container-input">
-                    <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" placeholder="email" name="user_email" >
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" placeholder="Usuario" name="user_email" >
                 </div>
 
                 <div class="container-input">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" placeholder="password" name="user_password">
+                    <input type="password" placeholder="Contraseña" name="user_password">
                 </div>
-                <a href="">¿Olvidaste tu contraseña?</a>
+                <!-- <a href="">¿Olvidaste tu contraseña?</a> -->
                 <button class="button">Iniciar sessión</button>
             </form>
         </div>
@@ -79,6 +79,14 @@
             </div>
         </div>
 
+        <?php 
+        if(isset($_POST['user_email']) && isset($_POST['user_password'])){
+            require_once("./Controllers/LoginController.php");
+            $start_session_obj = new LoginController();
+            $start_session_obj -> session_start_controller();
+        }       
+        ?>
+
     </div>
 
     <!-- <button id="btn_change">Click</button> -->
@@ -88,5 +96,7 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
+
+
 
 </html>

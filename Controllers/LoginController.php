@@ -64,7 +64,13 @@
 
             if($init_session -> rowCount() == 1){
                 $data_user = $init_session->fetch();
-                
+                session_start(['name' => 'esencia_real']);
+                $_SESSION['user_id'] = $data_user['user_id'];
+                $_SESSION['user_name'] = $data_user['user_name'];
+                $_SESSION['rol_user'] = $data_user['rol_user'];
+                $_SESSION['token_user'] = md5(uniqid(mt_rand(), true));
+
+                return header("Location: ". SERVER."home/" );
             }else{
                 echo '
                 <script>
