@@ -1,3 +1,11 @@
+<?php 
+      
+        if(isset($_POST['user_name']) && isset($_POST['user_password'])){
+            require_once("./Controllers/LoginController.php");
+            $start_session_obj = new LoginController();
+            $start_session_obj -> session_start_controller();
+        }       
+        ?>
 <!doctype html>
 
 <html lang="en">
@@ -9,6 +17,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Esencia real</title>
     <link rel="stylesheet" href="./Views/partials/login/style-login.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -28,7 +37,7 @@
 
                 <div class="container-input">
                     <ion-icon name="person-outline"></ion-icon>
-                    <input type="text" placeholder="Usuario" name="user_email" >
+                    <input type="text" placeholder="Usuario" name="user_name" >
                 </div>
 
                 <div class="container-input">
@@ -78,14 +87,6 @@
                 <button class="button" id="btn-sign-in">Inciar sessión</button>
             </div>
         </div>
-
-        <?php 
-        if(isset($_POST['user_email']) && isset($_POST['user_password'])){
-            require_once("./Controllers/LoginController.php");
-            $start_session_obj = new LoginController();
-            $start_session_obj -> session_start_controller();
-        }       
-        ?>
 
     </div>
 

@@ -9,7 +9,7 @@
                 <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Crear usuario</h1>
                 </div>
-                <form class="user FormularioAjax" data-form="save" method="POST" action="<?= SERVER_URL?>/Actions/UserActions.php" >
+                <form class="user FormularioAjax" action="<?= SERVER_URL ?>Actions/UserActions.php" method="POST" data-form="save"  >
                     <input type="hidden"  name="add_user">
                     <div class="form-group row ">
                         <div class="col-sm-6 mb-3 mb-sm-0">

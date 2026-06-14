@@ -1,6 +1,6 @@
 <?php
     
-    if ($action){
+    if (isset($action) && $action){
         require_once ("../config/ServerDB.php");
     }else{
         require_once ("./config/ServerDB.php");
@@ -10,13 +10,13 @@
         /* FUNCION PARA CONECTAR A LA BASE DE DATOS */
         protected static function connect_BD(){
             $conexion = new PDO(SGBD, USER, PASS);
-            $conn->exec("SET NAMES utf8");
-            return $conn;
+            $conexion->exec("SET NAMES utf8");
+            return $conexion;
         }
 
         /* FUNCION PARA EJECUTAR CONSULTAS SIMPLE */
         protected static function execute_consult($consult_sql){
-            $response = self :: connect_BD -> prepare($consult_sql);
+            $response = self :: connect_BD() -> prepare($consult_sql);
             $response -> execute();
             return $response;
         }

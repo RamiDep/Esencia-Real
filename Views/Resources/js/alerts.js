@@ -31,7 +31,7 @@ function submitForm(even){
     Swal.fire({
         title: '¿Estas seguro?',
         text: alertText,
-        type: 'question',
+        icon: 'question',
         confirmButtonText: 'Aceptar',
         cancelButtonText: 'Cancelar',
         showCancelButton: true,
@@ -56,7 +56,7 @@ function alertBySweetAlert(alert){
             Swal.fire({
                 title: alert.Title,
                 text: alert.Text,
-                type: alert.Type,
+                icon: alert.Type,
                 confirmButtonText: 'Aceptar'
             });
         break;
@@ -64,7 +64,7 @@ function alertBySweetAlert(alert){
             Swal.fire({
                 title: alert.Title,
                 text: alert.Text,
-                type: alert.Type,
+                icon: alert.Type,
                 confirmButtonText: 'Aceptar'
             }).then((result) => {
                 if (result.value === true) {
@@ -76,7 +76,7 @@ function alertBySweetAlert(alert){
             Swal.fire({
                 title: alert.Title,
                 text: alert.Text,
-                type: alert.Type,
+                icon: alert.Type,
                 confirmButtonText: 'Aceptar'
             }).then((result) => {
                 if (result.isConfirmed) {
