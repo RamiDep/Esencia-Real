@@ -17,8 +17,8 @@
             $password_repead = MainModel :: clean_string($_POST['user_password_repeat']);
             $type_user = MainModel :: clean_string($_POST['user_role']);
 
-            if(!empty($user_name) || !empty($last_name_father) || !empty($last_name_mother) || !empty($email)
-                || !empty($phone) || !empty($password) || !empty($password_repead) || !empty($type_user)){
+            if(empty($user_name) || empty($last_name_father) || empty($last_name_mother) || empty($email)
+                || empty($phone) || empty($password) || empty($password_repead) || empty($type_user)){
                 $alerta = [
                     "Alerta"=>"simple",
                     "Title"=>"Ocurrio un error inesperado",
@@ -62,7 +62,7 @@
                 exit();
             }
 
-            if (MainModel::checkData("[a-zA-Z0-9$@.\-]{7,100}", $password) || MainModel::checkData("[a-zA-Z0-9$@.\-]{7,100}", $password_repead)){
+            if (MainModel::check_data_form("[a-zA-Z0-9$@.\-]{7,100}", $password) || MainModel::check_data_form("[a-zA-Z0-9$@.\-]{7,100}", $password_repead)){
                 $alerta = [
                     "Alerta"=>"simple",
                     "Title"=>"Ocurrio un error inesperado",
@@ -110,7 +110,7 @@
                 exit();
             }
 
-            if (MainModel::checkData("[0-9\-]{1,10}", $phone)){
+            if (MainModel::check_data_form("[0-9\-]{1,10}", $phone)){
                 $alerta = [
                     "Alerta"=>"simple",
                     "Title"=>"Ocurrio un error inesperado",
@@ -141,6 +141,9 @@
                 "user_number_phone" => $phone,
                 "user_password" => $password,
                 "user_role" => $type_user,
+                "user_user" => strtolower($user_name . "." . $last_name_father),
+                "status" => 1,
+
             ];
 
             $add_user_insert = UserModel :: add_user_model($data_user);
